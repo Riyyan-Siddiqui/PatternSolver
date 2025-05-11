@@ -1,7 +1,5 @@
 # Sliding Puzzle Solver
 
-For live demo see: https://jweilhammer.github.io/sliding-puzzle-solver/
-
 For details on what a sliding puzzle is, see: https://en.wikipedia.org/wiki/Sliding_puzzle
 
 This project aims to show differences in several common search algorithms, implement a strategic algorithm to solve any sized puzzle, allow the user to edit puzzle start/goal states to solve themselves or with an algorithm, and package it all into a mobile friendly progressive web app
@@ -51,14 +49,6 @@ Output minified assets for production with:
 ```
 npm run build
 ```
-
-# Testing
-
-For details on testing and some notes on Puzzle solvability, check out: [tests/README.md](tests/README.md)
-
-The [Mocha testing framework](https://mochajs.org) is currently being used to run tests to make sure our assumptions on solvability are correct, each algorithm can solve custom goal states, and that the strategic algorithm works for larger puzzles.  
-
-TODO on more detailed unit tests for all methods, but this is fine for now
 
 
 # Feature list
