@@ -1,0 +1,39 @@
+{
+  "name": "slidingpuzzle",
+  "version": "1.0.0",
+  "description": "Cool sliding puzzle program that can solve puzzles for you using different algorithms",
+  "private": true,
+  "devDependencies": {
+    "css-loader": "^6.7.1",
+    "css-minimizer-webpack-plugin": "^4.0.0",
+    "esm": "^3.2.25",
+    "expect.js": "^0.3.1",
+    "html-loader": "^4.1.0",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.6.1",
+    "mocha": "^10.0.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.10.1",
+    "workbox-webpack-plugin": "^6.5.4"
+  },
+  "scripts": {
+    "start": "webpack serve --open --config webpack.config.cjs --mode development",
+    "build": "webpack --config webpack.config.cjs --mode production",
+    "test": "mocha './tests/*.test.js' --require esm --timeout 0",
+    "testFull": "FULL_TEST_SUITE=true mocha './tests/*.test.js' --require esm --timeout 0",
+    "testStrategic": "mocha './tests/strategic*.test.js' --require esm --timeout 0"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jweilhammer/SlidingPuzzle.git"
+  },
+  "author": "Jake Weilhammer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jweilhammer/SlidingPuzzle/issues"
+  },
+  "homepage": "https://github.com/jweilhammer/SlidingPuzzle#readme"
+}
