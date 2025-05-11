@@ -1,34 +1,57 @@
-# Sliding Puzzle Solver
+# 🧩 Sliding Puzzle Solver
 
-For details on what a sliding puzzle is, see: https://en.wikipedia.org/wiki/Sliding_puzzle
+A sleek and powerful sliding puzzle solver and visualizer — built to help you explore and understand classic search algorithms and an efficient, human-like solving strategy for puzzles of *any size*. Designed for mobile-first use as a **Progressive Web App (PWA)**.
 
-This project aims to show differences in several common search algorithms, implement a strategic algorithm to solve any sized puzzle, allow the user to edit puzzle start/goal states to solve themselves or with an algorithm, and package it all into a mobile friendly progressive web app
+🔗 [What is a sliding puzzle?](https://en.wikipedia.org/wiki/Sliding_puzzle)
 
+---
 
-# Strategic Algorithm
+## 🚀 Features
 
-In order to solve puzzle that are larger than a 3x3 efficiently, a strategic algorithm has been implemented
+- ✅ **Solve Any Puzzle Size**  
+  Solve NxP sliding puzzles using a **fast, non-optimal strategic algorithm** based on human techniques.
 
-It essentially follows a strategy that anyone can do, and is based off of this [WikiHow Algorithm for Solving Sliding Puzzles](https://www.wikihow.com/Solve-Slide-Puzzles)
+- 📊 **Algorithm Visualizer**  
+  Compare runtimes and memory usage of common search algorithms using 3x3 puzzles:
+  - **Breadth-First Search (BFS)**
+  - **A\* Search** (with and without closed list)
+  - **Iterative Deepening A\*** (IDA\*)
 
-In addition to the above steps to solve basic puzzles, here is the logic my algorithm follows for solving custom goal states (goal's blank tile is not in bottom right corner):
-```
-Rules:
-1. If the puzzle is non-square, solve rows or columns first until remaining unsolved puzzle is square
+- 🧠 **Edit & Experiment Freely**
+  - Solve manually using drag and drop
+  - Edit start and goal states
+  - Shuffle or reset puzzle
+  - Rotate or flip tiles
+  - Resize puzzle board dynamically
+  - Randomize size and tile state
 
-2. Alternate between solving rows and columns until remaining unsolved puzzle is a 2x2
-    * The remaining 2x2 puzzle should include the blank space
+- 🖼️ **Custom Backgrounds**
+  - Upload local or URL-based images
+  - Flip background image horizontally/vertically
+  - Toggle grid borders and tile numbers
 
-3. Start by solving rows top/down & columns left/right until reaching the goal's blank row/col
-    * If on the goal's blank row, start solving rows bottom/up
-    * If on the goal's blank col, start solving cols right/left
+- 📱 **Progressive Web App (PWA)**
+  - Fully mobile-friendly
+  - Installable and offline-capable
 
-4. Once a tile is in its goal position, never touch it again
-    * Each solved row/col reduces the effective problem space and leave an inner un-solved puzzle
-    * When moving tiles on edge cases, always move blank towards the inner un-solved puzzle
-```
+---
 
-What is interesting is that while this algorithm does not give an optimal solution, the runtime is incredibly fast and memory space is constant.  This allows it to outperform all the other search algorithms and scale to very large puzzle sizes.
+## 🧩 Strategic Solving Algorithm
+
+This project includes a strategic algorithm to efficiently solve large puzzles. It’s based on [WikiHow’s human method](https://www.wikihow.com/Solve-Slide-Puzzles), adapted for custom goal states and optimized for performance.
+
+### 🔧 Rules & Strategy
+
+```text
+1. If the puzzle is non-square, solve rows or columns until the remaining puzzle is square.
+2. Alternate solving rows and columns until a 2x2 remains (must include the blank tile).
+3. Direction of solving:
+   - Solve rows top-down and columns left-right.
+   - If on the goal's blank tile row/column, reverse direction.
+4. Once a tile is in its goal position, never move it again.
+   - Each solved row/column reduces the problem space.
+   - Keep blank inside the unsolved inner area.
+
 
 
 
