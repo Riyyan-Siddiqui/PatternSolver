@@ -1,5 +1,5 @@
 {
-  "name": "slidingpuzzle",
+  "name": "PatternSolver",
   "version": "1.0.0",
   "description": "Cool sliding puzzle program that can solve puzzles for you using different algorithms",
   "private": true,
@@ -28,12 +28,12 @@
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jweilhammer/SlidingPuzzle.git"
+    "url": "git+https://github.com/Riyyan-Siddiqui/PatternSolver.git"
   },
   "author": "Jake Weilhammer",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jweilhammer/SlidingPuzzle/issues"
+    "url": "https://github.com/Riyyan-Siddiqui/PatternSolver/issues"
   },
-  "homepage": "https://github.com/jweilhammer/SlidingPuzzle#readme"
+  "homepage": "https://github.com/Riyyan-Siddiqui/PatternSolver#readme"
 }
